@@ -34,11 +34,9 @@ public class Main extends JavaPlugin{
 	@EventHandler
 	public void onSignChange(SignChangeEvent e) {
 	    if (e.getPlayer().hasPermission("sign.color")) {
-	        for (int i = 0; i < 4; i++) {
-	            String line = e.getLine(i);
-	            if (line != null && !line.equals("")) {
-	                e.setLine(i, ChatColor.translateAlternateColorCodes('&', line));
-	            }
+	        String line1 = e.getLine(1);
+	        if (line1.equalsIgnoreCase("[tlight]")){
+	        	e.getPlayer().sendMessage("You created a traffic light!");
 	        }
 	    }
 	}
