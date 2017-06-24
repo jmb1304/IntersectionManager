@@ -1,0 +1,7 @@
+name: Intersection-Manager
+main: com.techonyourtime.main.Main
+version: 0.1
+description: Stuff
+commands:
+  intersection:
+    description: Manages the plugin
