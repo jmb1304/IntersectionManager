@@ -1,4 +1,4 @@
-package com.techonyourtime.main;
+package com.techonyourtime.intersectionmanager.main;
 
 import java.util.logging.Logger;
 
@@ -12,6 +12,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.SignChangeEvent;
 import org.bukkit.material.Sign;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import com.techonyourtime.intersectionmanager.command.IntersectionCommand;
 
 import net.md_5.bungee.api.ChatColor;
 
@@ -31,7 +33,14 @@ public class Main extends JavaPlugin{
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
 		Player player = (Player) sender;
 		if(commandLabel.equalsIgnoreCase("intersection")){
-			player.sendMessage("It Worked!");
+			if(args[0] == "create" && IntersectionCommand.getEditModeState() == false){
+				player.sendMessage(ChatColor.GREEN + "Intersection Edit Mode Activated");
+				IntersectionCommand.setEditModeState(true);
+			}
+			if(args[0] == "create" && IntersectionCommand.getEditModeState() == true){
+				player.sendMessage(ChatColor.RED + "Intersection Edit Mode Deactivated");
+				IntersectionCommand.setEditModeState(false);
+			}
 	}
 	return true;
 	}
