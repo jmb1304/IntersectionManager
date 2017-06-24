@@ -1,4 +1,4 @@
-package com.techonyourtime.intersectionmanager.block;
+package com.techonyourtime.intersectionmanager.light;
 
 public class LightState {
 	public static final int GreenLight = 2;

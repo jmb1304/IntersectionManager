@@ -1,4 +1,4 @@
-package com.techonyourtime.intersectionmanager.command;
+package com.techonyourtime.intersectionmanager.intersection;
 
 import org.bukkit.Location;
 
