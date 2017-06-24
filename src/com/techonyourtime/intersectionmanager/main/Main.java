@@ -33,11 +33,13 @@ public class Main extends JavaPlugin{
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
 		Player player = (Player) sender;
 		if(commandLabel.equalsIgnoreCase("intersection")){
-			if(args[0] == "create" && IntersectionCommand.getEditModeState() == false){
+			logger.info(args[0]);
+			logger.info(Boolean.toString(IntersectionCommand.getEditModeState()));
+			if(args[0].equalsIgnoreCase("create") & !IntersectionCommand.getEditModeState()){
 				player.sendMessage(ChatColor.GREEN + "Intersection Edit Mode Activated");
 				IntersectionCommand.setEditModeState(true);
 			}
-			if(args[0] == "create" && IntersectionCommand.getEditModeState() == true){
+			else if(args[0].equalsIgnoreCase("create") & IntersectionCommand.getEditModeState()){
 				player.sendMessage(ChatColor.RED + "Intersection Edit Mode Deactivated");
 				IntersectionCommand.setEditModeState(false);
 			}

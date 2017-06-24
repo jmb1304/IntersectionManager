@@ -1,5 +1,5 @@
 name: Intersection-Manager
-main: com.techonyourtime.main.Main
+main: com.techonyourtime.intersectionmanager.main.Main
 version: 0.1
 description: Stuff
 commands:

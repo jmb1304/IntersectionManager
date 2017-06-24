@@ -10,6 +10,7 @@ import org.bukkit.event.block.SignChangeEvent;
 import org.bukkit.material.Sign;
 
 public class EventListener implements Listener {
+	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void onSignChange(SignChangeEvent e) {
 		Main.logger.info("sign placed");
@@ -19,7 +20,8 @@ public class EventListener implements Listener {
         	Sign s = (Sign) e.getBlock().getState().getData();
         	Block b = e.getBlock();
         	Block attachedBlock = b.getRelative(s.getAttachedFace());
-        	attachedBlock.setType(Material.STONE);
+        	attachedBlock.setType(Material.STAINED_CLAY);
+        	attachedBlock.setData((byte) 5);
         	int x = attachedBlock.getX();
         	int y = attachedBlock.getY();
         	int z = attachedBlock.getZ();
