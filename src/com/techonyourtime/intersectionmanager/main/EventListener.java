@@ -41,7 +41,7 @@ public class EventListener implements Listener {
 				org.bukkit.block.Sign sign = (org.bukkit.block.Sign) e.getClickedBlock().getState();
 				if (sign.getLine(0) == "[int]"){
 					e.getPlayer().sendMessage("You Clicked an Intersection Sign!");
-					sign.setLine(1, ChatColor.GREEN + "Traffic Light");
+					sign.setLine(1, ChatColor.GREEN + "Traffic Light!");
 					
 				}
 				
