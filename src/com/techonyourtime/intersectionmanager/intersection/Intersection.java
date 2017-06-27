@@ -3,7 +3,7 @@ package com.techonyourtime.intersectionmanager.intersection;
 import org.bukkit.Location;
 
 public class Intersection {
-	public Intersection(){
+	public Intersection(String name, String id){
 		
 	}
 	

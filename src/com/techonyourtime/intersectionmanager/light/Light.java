@@ -7,6 +7,8 @@ import org.bukkit.block.Block;
 public class Light {
 	private static Location lightLocation = new Location(null, 0, 0, 0);
 	private static int lightState;
+	private static String associatedIntersection;
+	
 	public Light(Location location){
 		lightLocation = location;
 	}
@@ -14,7 +16,13 @@ public class Light {
 	public static void setLightState(int state){
 		lightState = state;
 	}
+	
 	public static int getLightState(){
 		return lightState;
 	}
+	
+	public static void associateIntersection(){
+		
+	}
+	
 }
