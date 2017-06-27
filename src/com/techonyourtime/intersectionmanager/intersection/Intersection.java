@@ -9,6 +9,7 @@ public class Intersection {
 	
 	public static void addLight(Location location, String name){
 		
+		
 	}
 
 }
